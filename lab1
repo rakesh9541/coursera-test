@@ -197,26 +197,17 @@ int main()
        cout<<"Details of student"<<(i+1)<<":\n";
        std[i].putdetails();
     }
-    return 0;
 
+std [i].Sortdatails (std, n);
 
+for (i=0; i<n; i++){
 
+cout<<(i+ i)<<"Details of student" << (i+1)<<"\n";
 
-
-
-
-
+std[i].putdetails();
 }
+return 0;
 }
-
-std (1).. Sostdataile (std, n);
-
-tos (i=0; i<n; i++)
-
-cc (i+ i) <<": \n"s Cont cc "octaile of student" ac std [i].pul de taile();
-
-iclu m 0;
-
 
 
 
