@@ -216,3 +216,91 @@ tos (i=0; i<n; i++)
 cc (i+ i) <<": \n"s Cont cc "octaile of student" ac std [i].pul de taile();
 
 iclu m 0;
+
+
+
+
+
+
+
+q3
+
+#include<iostream>
+using namespace std;
+class time
+{
+int hours,minutes,seconds;
+public:
+void gettime(int h,int m,int s)
+{
+hours=h;
+minutes=m;
+seconds=s;
+}
+void puttime()
+{
+cout<<hours<<":"<<minutes<<":"<<seconds<<endl;
+}
+void sum(time,time);
+void diff(time,time);
+};
+void time::sum(time t1,time t2)
+{
+seconds=t1.seconds+t2.seconds;
+minutes=seconds/60;
+seconds=seconds%60;
+minutes+=t1.minutes+t2.minutes;
+hours=minutes/60;
+minutes=minutes%60;
+hours=hours+t1.hours+t2.hours;
+}
+void time::diff(time t1,time t2)
+{
+if(t1.seconds>=t2.seconds)
+{
+seconds=t1.seconds-t2.seconds;
+}
+else
+{
+t1.minutes=t1.minutes-1;
+t1.seconds=t1.seconds+60;
+seconds=t1.seconds-t2.seconds;
+}
+if(t1.minutes>=t2.minutes)
+{
+minutes=t1.minutes-t2.minutes;
+}
+else
+{
+t1.hours=t1.hours-1;
+t1.minutes=t1.minutes+60;
+minutes=t1.minutes-t2.minutes;
+}
+if(t1.minutes>=t2.hours)
+{
+hours=t1.hours-t2.hours;
+}
+else
+{
+t1.hours=t1.hours+12;
+hours=t1.hours-t2.hours;
+}
+}
+int main()
+{
+int a,b,c,p,q,r;
+time T1,T2,T3,T4;
+cout<<"enter the time";
+cin>>a>>b>>c;
+cin>>p>>q>>r;
+T1.gettime(a,b,c);
+T2.gettime(p,q,r);
+T3.sum(T1,T2);
+cout<<"sum="<<endl;
+T3.puttime();
+T4.diff(T1,T2);
+cout<<"diff="<<endl;
+T4.puttime();
+return 0;
+}
+
