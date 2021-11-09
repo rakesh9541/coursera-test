@@ -1,1 +1,91 @@
 
+#include<iostream>
+using namespace std;
+int main()
+{
+    char a[20],b[20],c[40],d[40],e[40],s[40];
+    int n=0,j=0,z,k,i,lend=0,lenc=0,lene=0,pos;
+    cout<<"enter a string"<<endl;
+    cin>>a;
+    while(a[n]!=0)
+    {
+        n++;
+    }
+    cout<<"length of sting = "<<n<<endl;
+    cout<<"Enter the 2nd string for concatination"<<endl;
+    cin>>b;
+    while(b[j]!=0)
+    {
+        j++;
+    }
+    for(i=0;i<n;i++)
+    {
+        c[i]=a[i];
+    }
+    for(k=n;k<j+n;k++)
+    {
+        c[k]=b[k-n];
+    }
+    for(i=0;i<j+n;i++)
+    {
+        cout<<c[i];
+        lenc++;
+    }
+    cout<<endl;
+    cout<<"Enter the 3rd string for comparision"<<endl;
+    cin>>d;
+    while(d[lend]!=0)
+    {
+        lend++;
+    }
+    int p=n>lend?n:lend;
+    int pi=0;
+    for(i=0;i<p;i++)
+    {
+        if(d[i]>a[i]){
+            cout<<d<<"is larger"<<endl;
+            pi=0;
+            break;
+        }
+
+
+    else if(d[i]<a[i])
+    {
+        cout<<a<<"is larger"<<endl;
+        pi=0;
+        break;
+    }
+    else if(d[i]==a[i])
+    {
+        cout<<"Strings are same"<<endl;
+        break;
+    }
+  }
+
+  cout<<"Enter the substring to get added with a string"<<endl;
+  cin>>e;
+  cout<<"enter position"<<endl;
+  cin>>z;
+  i=0,j=0,k=0;
+  while(i!=z)
+  {
+      s[j]=a[i];
+      i++;
+      j++;
+  }
+  while(e[k]!='\0')
+  {
+      s[j]=e[k];
+      j++;
+      k++;
+  }
+  while(a[i]!='\0')
+  {
+      s[j]=a[i];
+      j++;
+      i++;
+  }
+  s[j]='\0';
+  cout<<s;
+  return 0;
+}
