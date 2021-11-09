@@ -89,3 +89,130 @@ int main()
   cout<<s;
   return 0;
 }
+
+
+
+
+
+
+q2
+
+
+#include <iostream>
+
+using namespace std;
+
+#define MAX 10
+
+class student
+
+{
+    public:
+
+     char name [30];
+     int rollno;
+     char grade;
+
+    public:
+
+     void getdetails ();
+     void putdetails();
+     void sortdetails (student S[], int);
+
+};
+void student ::getdetails ()
+{
+
+  cout <<"entu name:";
+
+  cin >>name;
+  cout << "enter roll number!";
+
+  cin >> rollno;
+  cout <<" enter grade";
+
+  cin >> grade;
+
+}
+void student :: putdetails()
+{
+
+cout << "Name: " name <<", Rollnumbers: "<rollno <<"grade: "<< grade<<"\n";
+}
+
+void student :: sortdetails (student std[], int n)
+{
+
+cout<<" *** DETAILS SORTED *** "<< endl);
+
+int i, j;
+student min;
+
+for(j=0; j<n-1; j++)
+{
+
+   for (i=0; i<n-j-1; i++)
+
+   {
+
+       if (std [i].rollno > std [i+1].rollno)
+
+{
+    min = std[i];
+
+    std [i] = std [i+1];
+    std [i+1] = min;
+
+}
+   }
+}
+int main()
+
+{
+
+  student std [Max];
+  student std2;
+  int n, i;
+
+  Cout << "enter total number of student:";
+  cin>>n;
+
+  for(i=0; i<n; i++)
+  {
+
+    cout<<"enter detaile of students!" <<i+1 <<": \n";
+    std[i].getdetails();
+
+   }
+
+   for (i=0;i<n; i++)
+
+   {
+     cout << "Details of students" << (i+1) <<": \n";
+     std[i].putdetails ();
+   }
+   std[i].sortdetails(std,n);
+   for(i=0;i<n;i++)
+   {
+       cout<<"Details of student"<<(i+1)<<":\n";
+       std[i].putdetails();
+    }
+    return 0;
+
+
+
+
+
+
+
+
+}
+}
+
+std (1).. Sostdataile (std, n);
+
+tos (i=0; i<n; i++)
+
+cc (i+ i) <<": \n"s Cont cc "octaile of student" ac std [i].pul de taile();
+
+iclu m 0;
