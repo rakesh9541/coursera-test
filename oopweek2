@@ -1,1 +1,167 @@
+public class lab5_01 {
+public static void main(String[] args) {
+int [] arr = {1,2,3,10,4,6};
+display(arr);
+largestValue(arr);
+average(arr);
+sort(arr);
 
+}
+static void display(int[] arr){
+for(int i=0;i<arr.length;i++){
+System.out.print(+arr[i]+" \n");
+}
+}
+static void largestValue(int[] arr){
+int largest = arr[0];
+for(int i =0;i<arr.length;i++){
+if(arr[i]>largest){
+largest = arr[i];
+}
+
+}
+System.out.println("The largest value is : "+largest);
+}
+static void average(int[] arr){
+int sum = 0;
+for(int i =0;i<arr.length;i++){
+sum = sum +arr[i];
+}
+System.out.println("The average of the array is :"+sum/arr.length);
+}
+static void sort(int[] arr){
+for(int i=0;i<arr.length;i++) {
+for(int j=i+1;j<arr.length;j++) {
+if(arr[i]>arr[j]) {
+int temp=arr[i];
+arr[i]=arr[j];
+arr[j]=temp;
+}
+}
+}
+System.out.println("Sorted array is ");
+for(int i=0;i<arr.length;i++) {
+System.out.print(arr[i]+" ");
+}
+}
+}
+
+
+
+
+
+
+public class lab5_03 {
+public static void main(String[] args) {
+int temp;
+int a = 4;
+int b = 6;
+swap(a,b);
+
+
+
+
+}
+static void swap(int a,int b){
+int temp;
+
+temp = a;
+a=b;
+b = temp;
+System.out.println(a);System.out.println(b);
+}
+
+}
+
+
+
+public class lab5_05 {
+public static void main(String[] args) {
+System.out.println(square(3));
+System.out.println(square2(0.2));
+}
+static int square(int n){
+return n*n;
+}
+static double square2(double n){
+return (double) (n*n);
+}
+
+}
+
+
+
+
+
+import java.util.Stack;
+
+class Main {
+  public static void main(String[] args) {
+
+    // create an object of Stack class Lab5q4
+    Stack<String> animals= new Stack<>();
+
+    // push elements to top of stack
+    animals.push("Dog");
+    animals.push("Horse");
+    animals.push("Cat");
+    System.out.println("Stack: " + animals);
+
+    // pop element from top of stack
+    animals.pop();
+    System.out.println("Stack after pop: " + animals);
+    }
+}
+
+
+
+
+
+public class lab6_01 {
+public static void main(String[] args){
+Game g1 = new Game();g1.type();
+Game g2 = new cricket();
+g2.type();
+Game g3 = new chess();
+g3.type();
+}
+static class Game{
+public void type(){
+System.out.println("indoor & outdoor games");
+}
+}
+static class cricket extends Game{
+public void type(){
+System.out.println("cricket is an outdoor game");
+}
+}
+static class chess extends Game{
+public void type(){
+System.out.println("chess is an indoor game");
+}
+}
+}
+
+
+
+
+public class lab6_02 {
+public static void main(String[] args) {
+Splendar s = new Splendar();
+Bike b = new Bike();
+b.run();
+s.run();
+}
+static class Bike{
+int speedlimit=30;
+void run(){
+System.out.println("speed limit is "+speedlimit);
+}
+}
+static class Splendar extends Bike{
+int speedlimit=40;
+void run(){
+System.out.println("speed limit is "+speedlimit);
+}
+}
+}
